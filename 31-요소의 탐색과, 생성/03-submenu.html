@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style type="text/css">
+        /**기본 속성 초기화*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .menu {
+            display: inline-flex;
+        }
+
+        /**메뉴에 포함된 모든 링크에 대한 크기, 배경 지정 및 글자 꾸미기*/
+        .menu a{
+            display: block;
+            width: 179px;
+            height: 48px;
+            background: url("img/btn.png");
+            line-height: 48px;
+            text-align: center;
+            font-weight: bold;
+            color: #cfdfb5;
+            text-decoration: none;
+        }
+
+        /**마우스가 올라간 링크에 대한 배경이미지 변경*/
+        .menu a:hover {
+            background: url("img/btn_over.png");
+        }
+        
+        /** 서브메뉴가 펼쳐지더라도 다른 요소들 위에 떠 있어야 하므로, Position처리*/
+        .sub {
+            position: absolute;
+            z-index: 1000;
+        }
+
+        /**서버메뉴의 기준점을 부모요소로 지정하기 위한 처리*/
+        .menu-item{
+            position: relative;
+        }
+        /**서브메뉴를 화면에서 숨긴다*/
+        .sub {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="#">Frontend</a>
+            <ul class="sub">
+                <li><a href="#">HTML+CSS</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">jQuery</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="#">Backend</a>
+            <ul class="sub">
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">JSP</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="#">Mobile</a>
+            <ul class="sub">
+                <li><a href="#">iOS</a></li>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">Hybrid</a></li>
+            </ul>
+        </li>
+    </ul>
+<!--페이지 컨텐츠를 가정한 요소-->
+<h1>Hello World</h1>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    /** `.menu-item`에 마우스에 마우스가 올라가거나 빠져나온 경우 호출되는 이벤트*/
+    $(".menu-item").on("mouseenter mouseleave", (e) => {
+        //마우스가 올라간 현재 요소의 하위요소 중에서 `.sub`클래스를 갖는 요소를 찾는다.
+        //찾아낸 요소에게 slideToggle 애니메이션을 적용한다.
+        // --> 기본적으로 숨겨진 상태이므로 마우스가 올라가면 표시되고,
+        //    마우스가 빠져나올 때 사라지게 된다.
+        $(e.currentTarget).find(".sub").slideToggle(300);
+    });
+    </script>
+</body>
+</html>

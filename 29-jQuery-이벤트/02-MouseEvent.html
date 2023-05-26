@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event-box {
+            border: 5px solid #007;
+            background: #d5d5d5;
+            color: #009;
+            font-size: 32px;
+            padding: 50px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="listener" class="event-box">Mouse Here~!!!</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //이벤트가 발생할 대상을 JS객체로 가져온다.
+        const eventBox = $('#listener');
+
+        //e.currentTarget 은 이벤트가 발생한 HTML요소 자신
+        //여기서는 eventBox 자신만을 의미함
+        eventBox.on('mousedown', (e) => ($(e.currentTarget).html('Mouse Down')));
+        eventBox.on('mouseup', (e) => ($(e.currentTarget).html('Mouse Up')));
+
+        eventBox.on('mouseout', (e) => ($(e.currentTarget).html('Mouse Out')));
+        eventBox.on('mouseover', (e) => ($(e.currentTarget).html('Mouse Over')));
+        
+    </script>
+</body>
+</html>

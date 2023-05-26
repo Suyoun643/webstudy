@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event-box {
+            font-size: 20px;
+            padding: 20px 10px;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+            width: 500px;
+        }
+        .input {
+            border: 5px solid #007;
+            background: #d5d5d5;
+            color: #009;
+        }
+        .console {
+            border: 5px solid #a0a;
+            background: #d5d5d5;
+            color: #505;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="listener" class="event-box input" placeholder="여기에 입력하세요" />
+    <div class="event-box console">
+        <p>keycode=<span id="result1">0</span></p>
+        <p>enter press=<span id="result2">none</span></p>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //keyCode : 키보드의 각 버튼에 할당된 일련번호
+        const listener = $('#listener');
+        const result1 = $('#result1');
+        const result2 = $('#result2');
+
+        listener.on('keyup', (e) => {
+            //이번에 눌러진 키에 대한 keycode값 얻기
+            const keyCode = e.keyCode;
+
+            result1 .html(keyCode);
+
+            if (keyCode == 13 ){
+                result2.html('엔터키가 놀러졌습니다.');
+            } else if (keyCode == 8) {
+                result2.html('백스페이스가 눌러졌습니다.');
+            } else {
+                result2.html('None');
+            }
+        });
+
+    </script>
+</body>
+</html>

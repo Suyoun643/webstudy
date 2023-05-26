@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style type="text/css">
+        td {width: 100px; height: 100px; text-align: center;}
+    </style>
+</head>
+<body>
+    <!--베너영역-->
+    <div id="banner">
+        <a href="#" id="banner-link" target="_blank">
+            <img id="banner-img" width="320">
+        </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        /*베너 이미지와 클릭시 이동할 URL을 JSON으로 정의한 배열*/
+        const banner = [
+            {img: "img/1.jpg", url:"http://www.itpaper.co.kr"},
+            {img: "img/2.jpg", url:"http://www.naver.com"},
+            {img: "img/3.jpg", url:"http://www.daum.net"},
+            {img: "img/4.jpg", url:"http://www.google.com"},
+        ];
+
+        /*n1~n2 사이의 랜덤값을 리턴하는 함수*/  
+        function random (n1, n2) {
+            return parseInt(Math.random()* (n2 - n1 + 1)) + n1;
+        }
+        /* banner 배열에서 임의의 요소 하나를 선택하여 #banner 영역에 저용하는 함수*/
+        function random_banner() {
+            //0~배열길이-1 사이의 랜덤값 얻기
+            const rand = random(0,banner.length - 1);
+            //데이터중 하나 선택 -> JSON객체
+            const item = banner[rand];
+            //베너 적용하기
+            $("#banner-link").attr("href", item.url);
+            $("#banner-img").attr("src",item.img);
+        }
+        /*페이지가 열린 후 호출될 함수*/
+        $(function(){
+            //베너 적용함수 호출
+            random_banner();
+
+            //3초마다 베너 변경을 위해서 타이머 가동
+            setInterval(function(){
+                random_banner();
+            },1000);
+        });
+    </script>
+</body>
+</html>

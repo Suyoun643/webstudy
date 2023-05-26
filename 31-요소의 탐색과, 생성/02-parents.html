@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style type="text/css">
+        #box {
+            width: 480px;
+            height: 300px;
+            padding-top: 20px;
+            background: url("img/1.jpg") no-repeat center center;
+        }
+
+        .menu {
+            padding: 10px 20px;
+            list-style: none;
+            background-color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul class="menu">
+            <li class="item">
+                <a href="img/1.jpg">img/1.jpg</a>
+            </li>
+            <li class="item">
+                <a href="img/2.jpg">img/2.jpg</a>
+            </li>
+            <li class="item">
+                <a href="img/3.jpg">img/3.jpg</a>
+            </li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        //링크가 클릭된 경우
+        $(".item > a").on("click", (e) => {
+            //링크의 기본 동작 제거
+            e.preventDefault();
+
+            //클릭된 링크의 href 속성 가져오기
+            const current = $(e.currentTarget);
+            const src = current.attr("href");
+
+            //클릭된 링크의 조상들 중에서`#box`를 찾아 배경이미지 설정
+            current.parents("#box").css({
+                "background-img":"url('" + src + "')",
+            });
+        });
+    </script>
+</body>
+</html>

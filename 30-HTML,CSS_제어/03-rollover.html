@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        /*전체 여백 제거 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*목록정의 태그 */
+        .menu {
+            list-style: none;
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="#"><img src="item" src="img/jquery.jpg" data-over="img/jquery_on.jpg"></a>
+        </li>
+        <li class="menu-item">
+            <a href="#"><img src="item" src="img/javascript.jpg" data-over="img/javascript_on.jpg"></a>
+        </li>
+        <li class="menu-item">
+            <a href="#"><img src="item" src="img/css.jpg" data-over="img/css_on.jpg"></a>
+        </li>
+        <li class="menu-item">
+            <a href="#"><img src="item" src="img/html.jpg" data-over="img/html_on.jpg"></a>
+        </li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(".item").on("mouseenter mouseleave", (e) => {
+            const current = $(e.currentTarget);
+            const tmp = current.attr("src");
+            const over = current.data("over");
+            current.attr("src",over);
+            current.date("over",tmp);
+        });
+    </script>
+</body>
+</html>

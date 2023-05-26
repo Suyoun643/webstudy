@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event-box {
+            font-size: 20px;
+            padding: 20px 10px;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+            width: 500px;
+        }
+        .input {
+            border: 5px solid #007;
+            background: #d5d5d5;
+            color: #009;
+        }
+        .console {
+            border: 5px solid #a0a;
+            background: #d5d5d5;
+            color: #505;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="listener" class="event-box input" placeholder="여기에 입력하세요" />
+    <div class="event-box console">press=<span id="result1">0</span></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //이벤트 발생 횟수를 기록하기 위한 변수
+        let press =  0;
+
+        const eventBox = $("#listener");
+
+        $("#listener").on("keypress", e=> {
+            $("#result1").html(++press);
+        });
+
+    </script>
+</body>
+</html>

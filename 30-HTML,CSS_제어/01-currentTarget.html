@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <div>
+        <button type="button" id="single">클릭하세요</button>
+    </div>
+    <hr>
+    <div>
+        <button type="button" class="multi">button(0번 클릭됨)</button>
+        <button type="button" class="multi">button(0번 클릭됨)</button>
+        <button type="button" class="multi">button(0번 클릭됨)</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    //각 버튼별로 클릭된 횟수를 카운트하기 위한 JSON 객체
+    const counter = {single: 0, multi:[0,0,0]};
+    /* id값으로 이벤트 정의 -> 단일 객체에 대한 이벤트*/
+    $("#single").on ("click", (e) => {
+        counter.single++;
+        $(e.currentTarget).html(counter.single + "번 클릭하셨습니다.");
+    });
+
+    /*클래스 이름으로 이벤트 정의 -> 복수 객체에 대한 이벤트*/
+    $(".multi").on("click", (e) => {
+        //상위 <div>안에서 자신이 몇번째 인지 확인 -> 0부터 시작되는 인덱스 값이 리턴된다.
+        const current = $(e.currentTarget);
+        const idx = current.index();
+        counter.multi[idx]++;
+        current.html(
+            "button" + idx + "("+ counter.multi[idx] + "번 클릭됨)"
+        );
+    });
+    </script>
+</body>
+</html>

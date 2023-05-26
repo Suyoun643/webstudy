@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{width: 100%; height: 100%; padding: 0; margin: 0;}
+        #container { text-align: center; font-size: 30px;  }
+
+        .box-xs { background-color: #f00;}
+        .box-sm { background-color: #0f0;}
+        .box-md { background-color: #00f;}
+        .box-lg { background-color: #ff0;}
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //브라우저의 넓이를 구간별 문자열로 반환하는 함수
+        function check_responsive() {
+            var w = $(window).innerWidth();     //브라우저의 넓이
+            var responsive = 'xs';              //기본 사이즈 단위는 xs
+
+            // //브라우저의 구간 판정
+            if (w >= 1200)      {responsive = 'lg';}
+            else if (w >= 992)  {responsive = 'md';}
+            else if (w >= 768)  {responsive = 'sm';}
+
+            //해상도 구간에 따라 xs,sm,md,lg 중 하나 리턴
+            return responsive;
+        }   // end check_responsive()
+
+        /** 브라우저 크기에따라 동작할 함수 정의 */
+        function set_responsive() {
+            //브라우저의 구간 판정 --> 해상도에 따라 xs,sm,md,lg 중 하나 리턴 
+            const responsive = check_responsive();
+            const container = $("#container");
+            //리턴된 값의 case에 따라 분기한다.
+            switch (responsive) {
+                case 'xs':
+                    container.html("<div class='box-xs'></div>");
+                    break;
+                case 'sm':
+                    container.html("<div class='box-sm'></div>");
+                    break;
+                case 'md':
+                    container.html("<div class='box-md'></div>");
+                    break;
+                default:
+                    container.html("<div class='box-lg'></div>");
+                    break;
+            }   //end swutch
+        }   // end set_responsive()
+
+        // 창 사이즈가 변경될 때 마다 실행함
+        $(window).on("resize", set_responsive);
+
+        // 페이지가 열리자마자 자동으로 1회 실행하도록 호출
+        set_responsive();
+    </script>
+</body>
+</html>

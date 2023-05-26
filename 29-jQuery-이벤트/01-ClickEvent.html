@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event-box {
+            border: 5px solid #007;
+            background: #d5d5d5;
+            color: #009;
+            font-size: 32px;
+            padding: 50px 0;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="listener" class="event-box">Mouse Here~!!!</div>
+
+    <script src="https://ajax.googleapis.com.ajax.libs.jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        //이벤트가 발생할 대상을 JS객체로 가져온다.
+        const eventBox = $('#listener');
+
+        //콜백함수에 전달되는 파라미터 `e`는 이벤트 정보
+        eventBox.on('click', (e)  => { 
+
+            eventBox.on('dblclick', (e) => {
+                $(e.currenTarget).html('Dobule Click Event');
+            });
+            eventBox.on('mousemove', (e) => ($(e.currentTarget).html('Mouse Move')));
+        });
+    </script>
+</body>
+</html>
