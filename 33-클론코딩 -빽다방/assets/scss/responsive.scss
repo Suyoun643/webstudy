@@ -1,0 +1,40 @@
+//반응형웹을 위한 미디어쿼리 구간 정의
+$breakpoint-small: 600px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1200px;
+
+/* Extra small devices (phones, 600px and down) */
+@mixin xs {
+    @media only screen and (max-width: #{$breakpoint-small}) {
+        @content;
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px and down) */
+@mixin sm {
+    @media only screen and (min-width: #{$breakpoint-small}) {
+        @content;
+    }
+}
+
+/*Medium devices (landscape tablets, 768px and up)*/
+@mixin md {
+    @media only screen and (min-width: #{$breakpoint-medium}) {
+        @content;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up)*/
+@mixin lg {
+    @media only screen and (min-width: #{$breakpoint-large}) {
+        @content;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+@mixin xl {
+    @media only screen and (min-width: #{$breakpoint-extra-large}) {
+        @content;
+    }
+}
