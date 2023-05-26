@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Example</title>
+        <style type="text/css">
+            input {
+                /** 테두리 : 굵기 종류 색상 */
+                border: 1px solid orange;
+            }
+
+            /** type속성의 값이 radio인 input요소와 checkbox인 input요소 */
+            input[type='radio'],
+            input[type='checkbox'] {
+                border: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <form >
+        <h1>회원가입</h1>
+        <fieldset>
+            <legend>기본정보</legend>
+            <div>
+                <label class="title" for="user_id">아이디</label>
+                <input type="text" name="user_id" id="user_id"/>
+            </div>
+            
+        </fieldset>
+        </form>
+    </body>
+</html>

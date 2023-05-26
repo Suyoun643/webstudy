@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Example</title>
+        <!--스타일시트-->
+        <style type="text/css">
+            /**테그 셀렉터**/
+            h2{
+                color: #0000ff;
+            }
+            /**클래스 셀렉터 -HTML태그의 class속성과 연결된다*/
+            .myclass{
+                color: #ff0000;
+            }
+            /**아이디 셀렉터-HTML태그의 id속성과 연결된다*/
+            #myid{
+                color: #00ff00;
+            }
+            /**조합령-두 조건이 충족하는 경우만 적용된다*/
+            h2.myclass{
+                color: #008000;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>CSS 셀렉터를 알아봅시다</h1>
+            <p>셀렉터란? - CSS가 적용될 대상을 지정하는 방법</p>
+
+            <h2>태그 셀렉터</h2>
+
+            <h2 class="myclass">클래스 셀렉터</h2>
+            <p class="myclass">서로 다른 여러개의 요소에 적용할 수 있다</p>
+
+            <h2 id="myid">아이디 셀렉터</h2>
+            <p class="myclass">태그+아이디, 태그+클래스 형식으로 조합이 가능</p>
+        </div>
+    </body>
+</html>

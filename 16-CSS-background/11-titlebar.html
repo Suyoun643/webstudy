@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Example</title>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #eee;
+        }
+        /** 타이틀 바 영역의 배경색상 그라데이션 처리 */
+        .titlebar {
+            width: 100%;
+            height: 45px;
+            border-bottom: 1px solid #555;
+            /** 웹킷에 대한 그라데이션 - 강의시간에는 구글 크롬만 대상으로 합니다 */
+            background-image: -webkit-linear-gradient(top, rgb(89, 189, 212) 8%, rgb(40, 142, 168) 74%);
+            /** 위치 고정 **/
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+        }
+        /** 타이틀바 영역의 제목 타이틀 **/
+        .titlebar .titlebar-text {
+            color: #fff;
+            font: 20px 'Helvetica';
+            text-shadow: 0 1px 1px #000;
+            text-align: center;
+            position: relative;
+            top: 10px;
+        }
+        /** 내용영역이 타이틀바에 가려지는 현상 방지하기 */
+        .content {
+            padding-top: 46px;
+        }
+        /** 8번 예제의 CSS 코드 재사용 */
+        #navi {
+            background: url(img/list_right.png) repeat-y right top, 
+                        url(img/menu.png) no-repeat left top,
+                        url(img/list_bg.png) repeat;
+        }
+        #navi a {
+            display: block;
+            width: auto;
+            height: 45px;
+            cursor: pointer;
+            text-indent: -10000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="titlebar">
+            <h1 class="titlebar-text">과목을 선택하세요</h1>
+        </header>
+        <section class="content">
+            <!-- 8번 예제의 HTML코드 재사용 -->
+            <nav id="navi">
+                <a href="#">웹표준/웹디자인</a>
+                <a href="#">소셜미디어마케팅</a>
+                <a href="#">IT/모바일</a>
+                <a href="#">OA</a>     
+            </nav>
+        </section>
+    </div>
+</body>
+</html>

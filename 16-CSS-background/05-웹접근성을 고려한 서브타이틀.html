@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Example</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div#subtitle {
+            width: auto;
+            /**배경이미지에 맞춘 높이값*/
+            height: 160px;
+            background: url(img/info_bg.png) repeat-x;
+        }
+        div#subtitle h2 {
+            width: 288px;
+            height: 108px;
+            margin: auto;
+            background: url(img/center.jpg) no-repeat;
+            text-indent: -10000px;
+            /**for firefox*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="subtitle">
+        <h2>차세대 웹표준을 위한 진화의 시작! 지금 도전하십시오. 무한한 가능성이 당신을 기다립니다.</h2>
+    </div>
+</body>
+</html>

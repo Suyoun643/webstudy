@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/CSS">
+        figure img {
+            /** 투명도 처리 */
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+        figure img:hover {
+            /** 투명도 처리 */
+            opacity: 1;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <div>
+            <img src="img/spring.jpg" title="봄" class="half"/>
+        </div>
+        <figcaption>새싹이 피어나는 이른 아침</figcaption>
+    </figure>
+</body>
+</html>

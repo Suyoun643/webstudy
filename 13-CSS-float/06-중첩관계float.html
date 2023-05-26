@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/css">
+        #parent{
+            border: 5px dotted #000000;
+            padding: 10px;
+        }
+        #box1 {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #eee;
+            margin: 0 0 10px 10px ;
+            float: right;
+        }
+        #box1 img {
+            width: 100%;
+        }
+        #footer {
+            width: auto;
+            height: 200px;
+            background-color: #f60;
+        }
+        /**부모요소가 끝나기 전을 의미하는 가상클래스 사용 */
+        .clear:after {
+            display: block;
+            content: '';
+            clear: both;
+            float: none;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="parent" class="clear">
+            <div id="box1">
+                <img src="img/title.jpg" alt="">
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+</html>

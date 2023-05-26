@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/css">
+        div.parent {
+            width: 250px;
+            border: 5px solid #f00;
+            background: #ffff00;
+            margin: auto;
+        }
+
+        div.child{
+            width: 200px;
+            height: 100px;
+            border: 5px solid #00f;
+            background: #f60;
+            margin: auto;
+        }
+
+        /** 시작태그 직후*/
+        .parent:before{
+            content: 'parent의 before';
+            display: block;
+            color: red;
+        }
+
+        /**종료태그 직전*/
+        .parent:after {
+            content: 'parent의 after';
+            display: block;
+            color: red;
+        }
+
+        /** 시작태그 직후*/
+        .child:before{
+            content: 'child의 before';
+            display: block;
+            color: green;
+        }
+
+        /**종료태그 직전*/
+        .child:after {
+            content: 'child의 after';
+            display: block;
+            color: green;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="parent">
+            <!--.parent의 before-->
+            <div class="child">
+                <!--.child의 before-->
+                박스1
+                <!--.child의 after-->
+            </div>
+            <!--.parenr의 after-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            border: 2px dotted #06f;
+            padding: 10px;
+            height: 200px;
+            display: flex;
+        }
+
+        .item {
+            border: 2px solid #f0f;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .item:nth-child(1) {
+            order: 3;
+        }
+
+        .item:nth-child(2) {
+            order: 1;
+        }
+
+        .item:nth-child(3) {
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>order</h1>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+</html>

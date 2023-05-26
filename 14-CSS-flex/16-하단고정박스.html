@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .map_wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .footer {
+        background-color: #06f;
+        height: 100px;
+        text-align: center;
+        /** 원래는 적용할수 없는 속성이지만, 부모에게 display:flex; flex-direction: column;이 적용된 경우는 가능*/
+        margin-top: auto;
+    }
+</style>
+</head>
+<body>
+    <div class="map_wrap">
+        <footer class="footer">
+            <h1>하단 고정 박스</h1>
+        </footer>
+    </div>
+</body>
+</html>

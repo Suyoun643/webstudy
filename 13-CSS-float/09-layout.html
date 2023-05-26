@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            /*전체 박스의 크기 지정과 중앙 배치*/
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            html,
+            body {
+                height: 100%;
+            }
+            /*전체박스 : 전체 레이아웃의 폭, 정렬을 제어하기 위한 박스*/
+            #container {
+                width: 800px;
+                height: auto;
+            }
+            /*상단 : 폭=부모값, 높이=고정*/
+            #header {
+                background-color: #ff00ff;
+                width: auto;
+                height: 100px;
+            }
+            /*내용 : 폭=부모값, 높이= 가변*/
+            #content {
+                background-color: #00ff00;
+                width: auto;
+                /**페이지의 최소높이가 브라우저의 높이를 가득 채우도록 처리*/
+                min-height: 300px;
+            }
+            /*하단:폭=부모값, 높이=고정*/
+            #footer {
+                background-color: #ff6600;
+                width: auto;
+                height: 80px;
+            }
+            #body {
+                width: 640px;
+                background-color: #ffff00;
+                float: left;
+                min-height: 300px;
+            }
+            #sidebar {
+                width: 160px;
+                background-color: #0000ff;
+                float: left;
+                min-height: 300px;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">상단영역</div>
+            <div id="content" class="clear">
+                <div id="body">본문영역</div>
+                <div id="sidebar">사이드 바</div>
+            </div>
+            <div id="footer">하단영역</div>
+        </div>
+    </body>
+</html>

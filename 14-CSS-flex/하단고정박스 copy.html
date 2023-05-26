@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .header {
+        display: flex;
+        background-color: #00c730;
+    }
+    .gnb,
+    .logo,
+    .search {
+        /**컨테이너의 넓이가 줄어들더라도 자신들의 고유 넓이를 유지*/
+        flex: none;
+    }
+    .gnb {
+        margin-left: auto;
+    }
+    .logo,
+    .gnb {
+        padding: 20px 30px;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .search {
+        display: flex;
+        width: 400px;
+        padding: 14px 0;
+        margin-left: 10px;
+    }
+    .search_button {
+        width: 37px;
+        border: 0;
+        background-color: #26a93a;
+    }
+    input {
+        /**부모(.search)안에서 버튼이 차지하는 공간을 제외한 나머지 영역을 가득채움*/
+        flex: 1;
+        height: 37px;
+        background-color: #ffffff;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .tablist {
+        height: 70px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .content {
+        display: flex;
+        /** 부모에게 display:flex가 적용된 상태에서 부모안의 다른 아이템의 크기를 
+        제외한 나머지 공간을 차지하도록 설정된다.*/
+        flex: 1;
+    }
+    .aside {
+        display: flex;
+        flex: none;
+        width: 400px;
+        background-color: #bfbfbf;
+    }
+    .main {
+        display: flex;
+        flex: 400px;
+        overflow: auto;
+    }
+    .map_wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .footer {
+        background-color: #06f;
+        height: 100px;
+        text-align: center;
+        /** 원래는 적용할수 없는 속성이지만, 부모에게 display:flex; flex-direction: column;이 적용된 경우는 가능*/
+        margin-top: auto;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">logo</div>
+        <div class="search">
+            <input type="text" title="검색" class="search_input">
+            <button type="button" class="search_button">검색</button>
+        </div>
+        <div class="gnb">gnb</div>
+    </header>
+    <div id="wrap" class="wrap">
+        <div class="tablist">
+            <h2>메뉴영역</h2>
+        </div>
+        <div class="content">
+            <div class="aside"></div>
+            <div class="main"></div>
+        </div>
+    </div>
+    <div class="map_wrap">
+        <footer class="footer">
+            <h1>하단 고정 박스</h1>
+        </footer>
+    </div>
+</body>
+</html>

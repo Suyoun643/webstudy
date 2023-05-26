@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            #titlebar {
+                width: 100%;
+                height: 40px;
+                background: #000;
+                /*스크롤에 상관 없이 화면상에서 고정된 위치를 유지한다.*/
+                position: fixed;
+                left: 0;
+                top: 0;
+                /*opacity: 0.5;*/
+            }
+
+            #titlebar > h1 {
+                /*부모의 높이와 같은 line-height 이므로 세로 중앙 배치 */
+                font: 1.2em/40px '돋움';
+                color: #fff;
+                text-align: center;
+            }
+
+            #content {
+                height: 9960px;
+                background: #eee;
+                padding-top: 40px;
+            }
+
+            </style>
+    </head>
+    <body>
+        <div id="titlebar">
+            <h1>TitleBar</h1>
+        </div>
+        <div id="content">내용영역</div>
+    </body>
+</html>

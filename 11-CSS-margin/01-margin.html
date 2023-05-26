@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            div#box1 {
+                background-color: #ff0000;
+                width: 200px;
+                height: 100px;
+                /** 바깥여백 : 주변 요소들을 밀어낸다. 벽과 인접한 경우 자신이 밀려난다.*/
+                /** 음수값을 지정할 경우 주변 요소를 끌어당긴다. 벽과 인접한 경우 자신이 화면을 벗어난다.*/
+                margin: 30px;
+            }
+
+            div#box2 {
+                background-color: #00ff00;
+                width: 150px;
+                height: 100px;
+            }
+            
+            </style>
+    </head>
+    <body>
+        <div id="box1">박스1</div>
+        <div id="box2">박스2</div>
+    </body>
+</html>

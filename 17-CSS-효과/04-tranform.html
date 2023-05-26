@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximom-scale=1.0, suer-scalable=no">
+    <title>CSS Example</title>
+    <style type="text/CSS">
+        * {
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+        }
+        .jb-box {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: orange;
+            transition: all 0.3s linear;
+            cursor: pointer;
+        }
+        .jb-circle {
+            width: 100%;
+            height: 100%;
+            border: 10px solid #ffffff;
+            border-radius: 50%;
+            color: #ffffff;
+            text-align: center;
+            font-size: 24px;
+            padding-top: 2px;
+        }
+        .trans1:hover {
+            transform: rotate(45deg);
+        }
+        .trans2:hover {
+            transform: rotate(-45deg);
+        }
+        .trans3:hover {
+            transform: rotate(720deg);
+        }
+        .trans4:hover {
+            transform: rotateX(180deg);
+        }
+        .trans5:hover {
+            transform: rotateY(180deg);
+        }
+        .trans6:hover {
+            transform: translate(50px, 50px);
+        }
+        .trans7:hover {
+            transform: translateX(50px);
+        }
+        .trans8:hover {
+            transform: translateY(50px);
+        }
+        .trans9:hover {
+            transform: scale(2, 2);
+        }
+        .trans10:hover {
+            transform: scaleX(2);
+        }
+        .trans11:hover {
+            transform: scaleY(2);
+        }
+        .trans12:hover {
+            transform: skew(20deg);
+        }
+        .trans13:hover {
+            transform: skewX(20deg);
+        }
+        .trans14:hover {
+            transform: skewY(20deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>rotate</h1>
+    <div class="jb-box trans1">
+        <div class="jb-circle">1</div>
+    </div>
+    <div class="jb-box trans2">
+        <div class="jb-circle">2</div>
+    </div>
+    <div class="jb-box trans3">
+        <div class="jb-circle">3</div>
+    </div>
+    <div class="jb-box trans4">
+        <div class="jb-circle">4</div>
+    </div>
+    <div class="jb-box trans5">
+        <div class="jb-circle">5</div>
+    </div>
+    <h1>translate</h1>
+    <div class="jb-box trans6">
+        <div class="jb-circle">6</div>
+    </div>
+    <div class="jb-box trans7">
+        <div class="jb-circle">7</div>
+    </div>
+    <div class="jb-box trans8">
+        <div class="jb-circle">8</div>
+    </div>
+    <h1>scale</h1>
+    <div class="jb-box trans9">
+        <div class="jb-circle">9</div>
+    </div>
+    <div class="jb-box trans10">
+        <div class="jb-circle">10</div>
+    </div>
+    <div class="jb-box trans11">
+        <div class="jb-circle">11</div>
+    </div>
+    <h1>skew</h1>
+    <div class="jb-box trans12">
+        <div class="jb-circle">12</div>
+    </div>
+    <div class="jb-box trans13">
+        <div class="jb-circle">13</div>
+    </div>
+    <div class="jb-box trans14">
+        <div class="jb-circle">14</div>
+    </div>
+</body>
+</html>

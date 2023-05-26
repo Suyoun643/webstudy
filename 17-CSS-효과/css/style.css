@@ -1,0 +1,70 @@
+.imafeList {
+    width: 1000px;
+    margin: auto;
+}
+.imageList:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+.imageItem {
+    display: block;
+    width: 25%;
+    float: left;
+}
+.imageItem a {
+    display: block;
+    width: auto;
+    border: 1px solid #eee;
+    margin: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    height: 265px;
+    transition: all 0.5s;
+}
+.imageItem a .imgArea {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.imageItem a .imgArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.imageItem a .textArea {
+    padding: 5px 15px 10px 15px;
+}
+.imageItem a .textArea h4 {
+    padding: 0;
+    margin: 5px 0;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.imageItem a .textArea p {
+    padding: 0;
+    margin: 5px 0;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.imageItem a .textArea ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.imageItem a .textArea ul li {
+    font-size: 11px;
+    margin: 3px 0;
+    padding: 0 0;
+}
+.imageItem:hover img {
+    transform: scale(1.1, 1.1);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            div.parent {
+                background-color: #ff00ff;
+                width:250px;
+                height: 100px;
+                border: 5px dotted #000000;
+            }
+            div.parent > div.child {
+                background-color: #00ff00;
+                width: 100%;
+                height: 100%;
+                /** 테두리와 여백만큼 벗어난다*/
+                border: 10px solid #0000ff;
+                padding: 30px 30px;
+            }
+
+            /**그냥 둔다.(기본값)*/
+            #box1{
+                overflow: visible;
+            }
+
+            /**스크롤 처리한다. 윈도우에서는 스크롤 트랙이 항상보인다*/
+            #box2{
+                overflow: scroll;
+            }
+
+            /**벗어나는 영역은 잘라버린다*/
+            #box3{
+                overflow: hidden;
+            }
+
+            /**작을 경우는 그냥두고, 벗어날 경우에만 스크롤 처리*/
+            #box4{
+                overflow: auto;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="parent" id="box1">
+            <div class="child">visible</div>
+        </div>
+        <br><br>
+        <div class="parent" id="box2">
+            <div class="child">scroll</div>
+        </div>
+        <br><br>
+        <div class="parent" id="box3">
+            <div class="child">hidden</div>
+        </div>
+        <br><br>
+        <div class="parent" id="box4">
+            <div class="child">auto</div>
+        </div>
+        <br><br>
+    </body>
+</html>

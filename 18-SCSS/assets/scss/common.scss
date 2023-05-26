@@ -1,0 +1,24 @@
+/** 여기저기서 반복적으로 등장해야 하는 구문들에 대한 묶음 = 믹스인 => JS의 함수*/
+// 필요하다면 파라미터 정의 가능함.
+// 간단한 사칙 연산, 조건분기도 수행 가능함
+@mixin myMixin($size) {
+    //변수값 지정(대입연산자가 콜론으로 사용됨)
+    $calc: 100px;
+
+    //파라미터 $size에 따른 조건분기
+    @if $size % 2 == 0 {
+        $calc: $calc + 50px;
+    } @else if $size % 3 == 0 {
+        $calc: $calc + 100px ;
+    }@else {
+        $calc: $calc;
+    }
+    width: $calc;                   //변수값을 활용한 CSS 속성 명시
+    height: 32px *2;                //연산자를 활용한 CSS 속성 명시
+    transition: all 0.3s ease-in;   //일반 CSS 속성 명시
+
+    //가상클래스는 &기호를 사용해서 적용
+    &hover {
+        transform: scale(1.2, 1.2);
+    }
+}

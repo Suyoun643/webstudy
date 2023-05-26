@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            border: 2px dotted #06f;
+            padding: 10px;
+            width: 500px;
+            height: 200px;
+        }
+
+        .w100p{
+            width: 100%;
+        }
+
+        .w250px{
+            width: 250px;
+        }
+
+        .item {
+            border: 2px solid #f0f;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .item:nth-child(1) {
+            flex-shrink: 0;
+            width: 100px;
+        }
+
+        .item:nth-child(2) {
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>container width 100%</h1>
+    <div class="container w100p">
+        <div class="item ">Normal Contents.</div>
+        <div class="item ">Very~~~ Very~~~ Long Contents.</div>
+    </div>
+
+    <h1>container width 250px</h1>
+    <div class="container w250px">
+        <div class="item">Normal Contents.</div>
+        <div class="item">Very~~~ Very~~~ Long Contents.</div>
+    </div>
+
+</body>
+</html>

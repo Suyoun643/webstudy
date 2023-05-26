@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .filter {
+        display: flex;
+        height: 70px;
+        padding-left: 8px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+        background-color: white;
+    }
+
+    .filter_box {
+        flex: 0 1 auto;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 38px;
+        padding: 8px;
+        background-color: white;
+        margin: 16px 8px 0;
+        box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .btn_refresh {
+        height: 38px;
+        margin: 16px 15px 0 auto;
+        padding: 9px 11px 8px;
+        border: 1px solid rgba(0,0,0,0.15);
+        background-color: white;
+        font-size: 17px;
+        flex: none;
+    }
+</style>
+</head>
+<body>
+    <div class="filter">
+        <div class="filter_box">가나다라마바사아자차카타파하가나다라마바사아자차카타파하</div>
+        <div class="filter_box">가나다</div>
+        <div class="filter_box">가나다라마바사</div>
+        <div class="filter_box">가나다라</div>
+
+        <button type="button" class="btn_refresh">버튼</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .list_fixed{
+        height: 60px;
+        padding: 10px;
+        border: 1px solid rgba( 0,0,0,0.1);
+    }
+
+    .title_wrap {
+        display: inline-flex;
+        max-width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .title_wrap .title {
+        overflow: hidden;
+        padding-top: 3px;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        font-size: 18px;
+    }
+
+    .sp_icon {
+        display: block;
+        margin-left: 4px;
+        padding: 5px;
+        border: 1px solid #f60;
+        background-color: #d5d5d5;
+    }
+</style>
+</head>
+<body>
+    <div class="list_fixed">
+        <div class="title_wrap">
+            <h3 class="title">This is Very~~~ Very~~~ long text. This is Very~~~ Very~~~ long text.</h3>
+            <span class="sp_icon">icon</span>
+            <span class="sp_icon">icon</span>
+            <span class="sp_icon">icon</span>
+        </div>
+    </div>
+</body>
+</html>

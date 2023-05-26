@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            border: 2px dotted #06f;
+            padding: 10px;
+            height: 200px;
+            width: 800px;
+        }
+        .container1 {
+            align-items: stretch;
+        }
+        .container2 {
+            align-items: flex-start;
+        }
+        .container3 {
+            align-items: flex-end;
+        }
+        .container4 {
+            align-items: center;
+        }
+        .container5 {
+            align-items: baseline;
+        }
+        
+            
+        .item {
+            border: 2px solid #f0f;
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+        }
+        .item:nth-child(1){
+            font-size: 20px;
+        }
+        .item:nth-child(2){
+            font-size: 60px;
+        }
+        .item:nth-child(3){
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>stretch</h1>
+    <div class="container container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <h1>flex-start</h1>
+    <div class="container container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <h1>flex-end</h1>
+    <div class="container container3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <h1>center</h1>
+    <div class="container container4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <h1>baseline</h1>
+    <div class="container container5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    
+</body>
+</html>

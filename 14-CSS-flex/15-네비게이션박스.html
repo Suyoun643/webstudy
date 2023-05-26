@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    .header {
+        display: flex;
+        background-color: #00c730;
+    }
+    .gnb,
+    .logo,
+    .search {
+        /**컨테이너의 넓이가 줄어들더라도 자신들의 고유 넓이를 유지*/
+        flex: none;
+    }
+    .gnb {
+        margin-left: auto;
+    }
+    .logo,
+    .gnb {
+        padding: 20px 30px;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .search {
+        display: flex;
+        width: 400px;
+        padding: 14px 0;
+        margin-left: 10px;
+    }
+    .search_button {
+        width: 37px;
+        border: 0;
+        background-color: #26a93a;
+    }
+    input {
+        /**부모(.search)안에서 버튼이 차지하는 공간을 제외한 나머지 영역을 가득채움*/
+        flex: 1;
+        height: 37px;
+        background-color: #ffffff;
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">logo</div>
+        <div class="search">
+            <input type="text" title="검색" class="search_input">
+            <button type="button" class="search_button">검색</button>
+        </div>
+        <div class="gnb">gnb</div>
+    </header>
+</body>
+</html>

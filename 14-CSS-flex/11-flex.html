@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            border: 2px dotted #06f;
+            padding: 10px;
+            width: auto;
+            height: 200px;
+        }
+
+        .item {
+            border: 2px solid #f0f;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .flex1 {
+            flex: 1 0 0;
+        }
+
+        .flex2 {
+            flex: 2 0 0;
+        }
+
+        .container-wrap {
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        .flex3 {
+            flex: 1 1 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>flex 1:2:1</h1>
+    <div class="container">
+        <div class="item flex1">Normal Contents.</div>
+        <div class="item flex2">Very~~~ Very~~~ Long Contents.</div>
+        <div class="item flex1">Short.</div>
+    </div>
+
+    <h1>flex 2단</h1>
+    <div class="container container-wrap">
+        <div class="item flex3">Normal Contents.</div>
+        <div class="item flex3">Very~~~ Very~~~ Long Contents.</div>
+        <div class="item flex3">Short.</div>
+        <div class="item flex3">Normal Contents.</div>
+        <div class="item flex3">Very~~~ Very~~~ Long Contents.</div>
+        <div class="item flex3">Short.</div>
+        <div class="item flex3">Normal Contents.</div>
+        <div class="item flex3">Very~~~ Very~~~ Long Contents.</div>
+        <div class="item flex3">Short.</div>
+        <div class="item flex3">Normal Contents.</div>
+        <div class="item flex3">Very~~~ Very~~~ Long Contents.</div>
+        <div class="item flex3">Short.</div>
+    </div>
+
+</body>
+</html>

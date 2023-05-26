@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/CSS">
+        p.box {
+            background-color: #6bb2ff;
+            height: 100px;
+            width: 80%;
+            padding: 10px;
+        }
+        .corner1 {
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .corner2 {
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.5), inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .corner3 {
+            border-radius: 20px 0 20px 0;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p class="box corner1">박스1</p>
+        <p class="box corner2">박스2</p>
+        <p class="box corner3">박스3</p>
+    </section>
+</body>
+</html>

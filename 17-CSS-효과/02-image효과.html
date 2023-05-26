@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/CSS">
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        .img-shadow {
+            box-shadow: 7px 7px 12px #000;
+        }
+        .img-circle {
+            border-radius:  50%;
+        }
+        .img-default {
+            width: 320px;
+            height: 160px;
+        }
+        .fill {
+            object-fit: fill;
+        }
+        .cover {
+            object-fit: cover;
+        }
+        .conrain {
+            object-fit:contain;
+        }
+        .none {
+            object-fit:none;
+        }
+        .scale-down {
+            object-fit:scale-down;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>기본 이미지</h1>
+            <img src="img/spring.jpg" alt="">
+        </div>
+        <div>
+            <h1>그림자 효과</h1>
+            <img 
+                src="img/summer.jpg" 
+                class="img-shadow">
+        </div>
+        <div>
+            <h1>둥근 이미지</h1>
+            <img 
+                src="img/autumn.jpg" 
+                class="img-circle">
+        </div>
+        <div>
+            <h1>둥근 이미지 + 그림자 효과</h1>
+            <img 
+                src="img/winter.jpg" 
+                class="img-circle img-shadow">
+        </div>
+        <div>
+            <h1>default</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default">
+        </div>
+        <div>
+            <h1>object-fit: fill</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default fill">
+        </div>
+        <div>
+            <h1>object-fit: cover</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default cover">
+        </div>
+        <div>
+            <h1>object-fit: contain</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default contain">
+        </div>
+        <div>
+            <h1>object-fit: none</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default none">
+        </div>
+        <div>
+            <h1>object-fit: scale-down</h1>
+            <img 
+                src="img/ship.png" 
+                class="img-default scale-down">
+        </div>
+    </section>
+</body>
+</html>

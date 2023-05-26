@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            border: 2px dotted #06f;
+            padding: 10px;
+            height: 300px;
+            width: 600px;
+        }
+        .container1{
+            flex-flow: row nowrap;
+        }
+        .container2{
+            flex-flow: row-reverse nowrap;
+        }
+        .container3{
+            flex-flow: column nowrap;
+        }
+        .container4{
+            flex-flow: column-reverse wrap;
+        }
+        .container5{
+            flex-flow: row wrap;
+        }
+        .item {
+            border: 2px solid #f0f;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>row nowrap</h1>
+    <div class="container container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>row-reverse nowrap</h1>
+    <div class="container container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>columnm nowrap</h1>
+    <div class="container container3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>column-reverse nowrap</h1>
+    <div class="container container4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>row wrap</h1>
+    <div class="container container5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>row-reverse wrap</h1>
+    <div class="container container6">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>column wrap</h1>
+    <div class="container container7">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>column-reverse wrap</h1>
+    <div class="container container8">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>row wrap-reverse</h1>
+    <div class="container container9">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>row-reverse wrap-reverse</h1>
+    <div class="container container10">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>column-reverse wrap-reverse</h1>
+    <div class="container container11">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h1>column-reverse wrap-reverse</h1>
+    <div class="container container12">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+</html>

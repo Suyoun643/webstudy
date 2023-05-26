@@ -1,0 +1,40 @@
+@import './colors.scss';
+@import './common.scss';
+@import './responsive.scss';
+
+.myScss {
+    width: 100%;
+    margin: auto;                     //.myScss라는 클래스에 대한 css속성
+    border: 5px dotted $pink;
+    padding: 5px;
+    box-sizing: border-box;
+
+    @include md {
+        padding: 25px;
+    }
+
+    @include lg {
+        padding: 50px;
+    }
+
+    &:after {                  //.myScss:after
+        display: block;
+        content: 'mobile';
+        clear: both;
+        float: none;
+    }
+
+    .myScssBox {                //.myScss .myScss-box                           
+        cursor: pointer;
+        float: left;
+
+        //.red 글래스가 .myScss-box와 함께 사용되었을 때 
+        // -> .myScss .myScss-box.red
+        &.red         {background-color: $red;     @include myMixin(1);}
+        &.green       {background-color: $green;   @include myMixin(2);}
+        &.blue        {background-color: $blue;    @include myMixin(3);}
+        &.orange      {background-color: $orange;  @include myMixin(4);}
+        &.yellow      {background-color: $yellow;  @include myMixin(5);}
+        &.pink        {background-color: $pink;    @include myMixin(6);}
+    }
+}

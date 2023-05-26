@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            /*전체 박스의 크기 지정과 중앙 배치*/
+            #container {
+                width: 800px;
+                border: 5px dotted#cccccc;
+                padding: 10px;
+                margin: auto;
+            }
+            div#box1 {
+                background-color: #ff00ff;
+                width: 200px;
+                height: 100px;
+                float: left;
+            }
+            div#box2 {
+                background-color: #0000ff;
+                width: 200px;
+                height: 100px;
+                float: left;
+            }
+            div#box3 {
+                background-color: #00ff00;
+                width: 200px;
+                height: 100px;
+                float: left;
+            }
+            div#box4 {
+                background-color: #ff6600;
+                width: 200px;
+                height: 100px;
+                float: left;
+            }
+            div#box5 {
+                background-color: #ffff00;
+                width: 200px;
+                height: 100px;
+                float: left;
+            }
+            .clear:after {
+                content: '';
+                display: block;
+                clear: both;
+                float: none;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="container" class="clear">
+            <div id="box1">박스1</div>
+            <div id="box2">박스2</div>
+            <div id="box3">박스3</div>
+            <div id="box4">박스4</div>
+            <div id="box5">박스5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html long="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>CSS Example</title>
+
+        <style type="text/CSS">
+            .parent {
+                background-color: #ff00ff;
+                border: 10px dotted #0000ff;
+                width:500px;
+                height: 300px;
+            }
+            .child {
+                background-color: #00ff00;
+                /**백분율 값은 부모요소의 Width, height를 기준으로 한다*/
+                width: 100%;
+                height: 100%;
+                /** 부모 크기에 여백과 테두리의 크기를 더하므로, 부모보다 커진다.*/
+                padding: 10px 20px;
+                border: 5px solid red;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">HTML &amp; CSS</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    html,
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .header {
+        height: 65px;
+        background-color: #00c73c;
+        text-align: center;
+    }
+    .tablist {
+        height: 70px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .content {
+        display: flex;
+        /** 부모에게 display:flex가 적용된 상태에서 부모안의 다른 아이템의 크기를 
+        제외한 나머지 공간을 차지하도록 설정된다.*/
+        flex: 1;
+    }
+    .aside {
+        display: flex;
+        flex: none;
+        width: 400px;
+        background-color: #bfbfbf;
+    }
+    .main {
+        display: flex;
+        flex: 400px;
+        overflow: auto;
+    }
+</style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header class="header">
+            <h1>풀페이지 레이아웃</h1>
+        </header>
+        <div class="tablist">
+            <h2>메뉴영역</h2>
+        </div>
+        <div class="content">
+            <div class="aside"></div>
+            <div class="main"></div>
+        </div>
+    </div>
+</body>
+</html>
